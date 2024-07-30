@@ -1,0 +1,120 @@
+body{
+    background-image: url(images/sedsbackroundreal.png);
+    background-size: cover;
+    height: 1700px;
+}
+
+.menu-button{
+    display: inline inline-block;
+    /* background-color: rgb(0,0,0,0.15); */
+    background-color: transparent;
+    color: white; 
+    cursor: pointer;
+    border-color: whitesmoke;
+    border-style: solid;
+    border-radius: 6px;
+    border-width: 1px;
+    width: fit-content;
+    height: 30px;
+    margin: 25px;
+    font-size: 16px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.upperleft-corner{
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    
+}
+
+.upperright-corner{
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.ublogo-home{
+    height: 63px;
+    margin-left: 60px;
+}
+
+.header-container{
+    padding-top: 28px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    background: transparent;
+}
+
+.search-input{
+    font-size: 13px;
+    font-family: "Rajdhani", sans-serif;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search-icon{
+    width: 7px;
+    margin-right: 22px;
+    margin-left: 108px;
+    color: whitesmoke;
+}
+
+.search-input::placeholder{
+    color: whitesmoke;
+    font-family: "Rajdhani",sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.ubsedslogo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.mainlogo-holder{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.ubsedslogo{
+    height: 370px;
+    margin-right: 25px;
+}
+
+.logotext-holder{
+    display: flex;
+    align-items: center;
+}
+
+.logotext{
+    font-family: "Rajdhani",sans-serif;
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 200px;
+}
