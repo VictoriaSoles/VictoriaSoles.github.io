@@ -1,12 +1,12 @@
 body{
-    background-image: url(images/sedsbackroundreal.png);
+    background: url(images/backround.png);
     background-size: cover;
-    height: 1700px;
+    background-attachment: fixed;
+    margin: 0;
 }
 
-.menu-button{
-    display: inline inline-block;
-    /* background-color: rgb(0,0,0,0.15); */
+.menu-btn,.dropdown-btn{
+    /* display: inline-block; */
     background-color: transparent;
     color: white; 
     cursor: pointer;
@@ -16,68 +16,66 @@ body{
     border-width: 1px;
     width: fit-content;
     height: 30px;
-    margin: 25px;
-    font-size: 16px;
-    font-family: "Rajdhani", sans-serif;
     font-weight: 500;
-    padding-left: 15px;
-    padding-right: 15px;
-
+    font-family: "Rajdhani", sans-serif;
+    font-size: 16px;
+    transition: backround-color 0.15s,
+        color 0.15s;
 }
 
-.upperleft-corner{
-    width: 300px;
-    display: flex;
-    align-items: center;
+.menu-btn:hoover{
+    background-color: rgba(0,0,0);
 }
 
-.header-buttons{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    margin-left: 150px;
-    
+.menu-btn{
+    display: inline-block;
+    padding: 0 15px;
+    margin:29px;
 }
-
-.upperright-corner{
-    width: 300px;
-    display: flex;
-    align-items: center;
-}
-
-.ublogo-home{
-    height: 63px;
-    margin-left: 60px;
+.dropdown-btn{
+    display: block;
+    margin: 10px;
 }
 
 .header-container{
-    padding-top: 28px;
-    padding-bottom: 50px;
+    flex: 1;
+    flex-direction: column;
+    max-height: 1000px;
+}
+
+.nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+}
+
+.ublogo-home{
+    max-width: 200px;
 }
 
 .search{
     width: max-content;
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 14px;
     background: transparent;
-}
-
-.search-input{
-    font-size: 13px;
-    font-family: "Rajdhani", sans-serif;
-    outline: none;
-    border: none;
-    background: transparent;
+    gap: 20px;
 }
 
 .search-icon{
     width: 7px;
-    margin-right: 22px;
-    margin-left: 108px;
+    color: whitesmoke;
+}
+
+.search-input{
+    font-size: 15px;
+    font-family: "Rajdhani", sans-serif;
+    outline: none;
+    border: none;
+    background: transparent;
     color: whitesmoke;
 }
 
@@ -88,33 +86,79 @@ body{
     font-size: 15px;
 }
 
-.ubsedslogo-container{
+.nav-bar .toggle-btn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown-menu{
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    display: none;
+}
+
+.dropdown-menu.open{
+    display: block;
+}
+
+/* RESPONSIVE NAVBAR */
+@media(max-width: 1300px){
+    .nav-links,
+    .nav-bar .search{
+        display:none;
+    }
+
+    .nav-bar .toggle-btn{
+        display: block;
+    }
+}
+
+.main-logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px;
-}
-
-.mainlogo-holder{
-    display: flex;
-    align-items: center;
-    height: 100px;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 90px;
 }
 
 .ubsedslogo{
-    height: 370px;
-    margin-right: 25px;
+    height: fit-content;
+    max-width: 90%;
 }
 
-.logotext-holder{
-    display: flex;
-    align-items: center;
+
+.card-container{
+    background:linear-gradient(rgba(0,0,0,0), #000 30%);
+    display: grid;
+    grid-gap: 60px;
+    padding: 90px;
+    padding-top: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.logotext{
-    font-family: "Rajdhani",sans-serif;
-    color: white;
-    font-size: 19px;
-    font-weight: 500;
-    margin-left: 200px;
+.card{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    min-height: 270px;
+}
+
+.grid-col-span{
+    grid-row-start: 2;
+    grid-column: span 2;
+}
+
+@media(max-width: 850px){
+    .grid-col-span{
+        grid-column: span 1;
+    }
+    .card-container{
+        padding: 30px;
+        grid-gap: 30px;
+    }
 }

@@ -10,47 +10,78 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
   </head>
+
   <body>
-    <header>
-        <div class="header-container">
-            <div class="upperleft-corner">
-              <img class="ublogo-home" src="images/UBlogo.webp" />
-            </div>
-            <div class="header-buttons">
-              <button class="menu-button">HOME</button>
-              <button class="menu-button">OUR TEAM</button>
-              <button class="menu-button">FAQS</button>
-              <button class="menu-button">SPONSERS</button>
-              <button class="menu-button">EVENTS</button>
-            </div>
-            <div class="upperright-corner">
-              <div class="search">
-                <span class="search-icon material-symbols-outlined">search</span>
-                <input class="search-input" type="search" placeholder="SEARCH" />
-              </div>
-            </div>
+    <header class="header-container">
+      <div class="nav-bar">
+        <img class="ublogo-home" src="images/UBlogo.webp" />
+        <nav>
+          <ul class="nav-links">
+            <a href="index.html"><button class="menu-btn">HOME</button></a>
+            <button class="menu-btn">OUR TEAM</button>
+            <a href="faq/faqpage.html"><button class="menu-btn">FAQS</button>
+            <a href="sponsers/sponserspage.html"><button class="menu-btn">SPONSERS</button></a>
+            <a href="events/eventspage.html"><button class="menu-btn">EVENTS</button></a>
+          </ul>
+        </nav>
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="SEARCH" />
+        </div>
+        <div class = "toggle-btn">
+            <i class="fa-solid fa-bars"></i>
           </div>
-          <div class = "ubsedslogo-container">
-              <div class = "mainlogo-holder">
-                  <img class = "ubsedslogo" src="images/ubsedslogo.webp">
-              </div>
-              <div class = "logotext-holder">
-                  <p class = "logotext">
-                      Students for the Exploration and Development of Space
-                  </p>
-              </div>
+      </div>
+
+      <div class="dropdown-menu">
+            <a href="index.html"><button class="dropdown-btn">HOME</button></a>
+            <button class="dropdown-btn">OUR TEAM</button>
+            <a href="faq/faqpage.html"><button class="dropdown-btn">FAQS</button></a>
+            <a href="sponsers/sponserspage.html"><button class="dropdown-btn">SPONSERS</button></a>
+            <a href="events/eventspage.html"><button class="dropdown-btn">EVENTS</button></a>
+        <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="SEARCH" />
           </div>
+      </div>
+      <div class="main-logo">
+        <img class="ubsedslogo" src="images/sedslogo.png" />
+      </div>
     </header>
 
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+
     <main>
-        
+      <div class="card-container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card grid-col-span"></div>
+      </div>
     </main>
-    
-    <div class = ""></div>
-    <h1></h1>
   </body>
 </html>
