@@ -5,8 +5,7 @@ body{
     margin: 0;
 }
 
-.menu-btn,.dropdown-btn{
-    /* display: inline-block; */
+.menu-btn,.dropdown-btn,.card-btn{
     background-color: transparent;
     color: white; 
     cursor: pointer;
@@ -21,6 +20,9 @@ body{
     font-size: 16px;
 }
 
+.card-btn{
+    margin-bottom: 15px;
+}
 
 .menu-btn{
     display: inline-block;
@@ -30,6 +32,11 @@ body{
 .dropdown-btn{
     display: block;
     margin: 10px;
+}
+
+.card-btn:hover, .menu-btn:hover{
+    background-color: white;
+    color: black;
 }
 
 .header-container{
@@ -63,6 +70,7 @@ body{
 .search-icon{
     width: 7px;
     color: whitesmoke;
+    padding-right: 1.5rem;
 }
 
 .search-input{
@@ -131,16 +139,50 @@ body{
 .card-container{
     background:linear-gradient(rgba(0,0,0,0), #000 30%);
     display: grid;
-    grid-gap: 60px;
-    padding: 90px;
+    grid-gap: 40px;
+    padding: 50px;
     padding-top: 200px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card{
-    background-color: antiquewhite;
+    background-color: grey;
     border-radius: 5px;
-    min-height: 270px;
+    overflow: hidden;
+    padding: 5rem 0 0;
+    transition: transform 200ms ease;
+    height: fit-content;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+.card:hover{
+    transform: scale(1.03);
+    .card-content{
+        transform: translateY(0%);
+    }
+}
+
+.card-content{
+    padding: 0 20px 10px;
+    background:linear-gradient(rgba(0,0,0,0), #000 60%);
+    transform: translateY(45%);
+    transition: transform 200ms ease;
+    height: fit-content;
+}
+
+.card-title{
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    font-size: 35px;
+    line-height: 1px;
+}
+
+.card-body{
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    font-size: 18px;
+    padding-bottom: 5px;
 }
 
 .grid-col-span{
