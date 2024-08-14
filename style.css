@@ -176,10 +176,17 @@ body{
     background-size: cover;
 }
 
-.card-subteams:hover, .card-research:hover, .card-rocketry:hover{
-    transform: scale(1.03);
+@media (hover){
+
     .card-content{
-        transform: translateY(0%);
+        transform: translateY(22%);
+        transition: transform 200ms ease;
+    }
+    .card-subteams:hover, .card-research:hover, .card-rocketry:hover{
+        transform: scale(1.03);
+        .card-content{
+            transform: translateY(0%);
+        }
     }
 }
 
@@ -191,8 +198,6 @@ body{
         rgba(0, 0, 0, 0.9), /* 10% opaque black */
         rgba(0, 0, 0, 1) /* Fully opaque black */
     );
-    transform: translateY(22%);
-    transition: transform 200ms ease;
     height: fit-content;
 }
 
