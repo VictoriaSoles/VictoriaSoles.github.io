@@ -1,5 +1,5 @@
 body{
-    background: url(images/backround.png);
+    background: url(images/n825vxqc.png);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -32,6 +32,7 @@ body{
 .dropdown-btn{
     display: block;
     margin: 10px;
+    text-decoration: none;
 }
 
 .card-btn:hover, .menu-btn:hover{
@@ -53,6 +54,11 @@ body{
     padding: 40px 5%;
 }
 
+.right-bar{
+    display: flex;
+    display: row;
+}
+
 .ublogo-home{
     max-width: 200px;
 }
@@ -70,7 +76,6 @@ body{
 .search-icon{
     width: 7px;
     color: whitesmoke;
-    padding-right: 1.5rem;
 }
 
 .search-input{
@@ -132,16 +137,16 @@ body{
 
 .ubsedslogo{
     height: fit-content;
-    max-width: 90%;
+    max-width: 70%;
 }
 
 
 .card-container{
     background:linear-gradient(rgba(0,0,0,0), #000 30%);
     display: grid;
-    grid-gap: 40px;
-    padding: 50px;
-    padding-top: 200px;
+    grid-gap: 50px;
+    padding: 60px;
+    padding-top: 300px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -179,12 +184,14 @@ body{
 }
 
 .card-content{
-    padding: 0 20px 10px;
-    background:linear-gradient(
-        hsl(0 0% 0%/0)
-        hsl(0 0% 0%/.1)
-        hsl(0 0% 0%/1));
-    transform: translateY(45%);
+    padding: 70px 20px 10px;
+    background: linear-gradient(
+        to bottom, /* Specify the direction of the gradient */
+        rgba(0, 0, 0, 0), /* Fully transparent black */
+        rgba(0, 0, 0, 0.9), /* 10% opaque black */
+        rgba(0, 0, 0, 1) /* Fully opaque black */
+    );
+    transform: translateY(22%);
     transition: transform 200ms ease;
     height: fit-content;
 }
@@ -194,12 +201,15 @@ body{
     color: white;
     font-size: 35px;
     line-height: 1px;
+    padding-top: 50px;
 }
 
 .card-body{
     font-family: "Rajdhani", sans-serif;
     color: white;
-    font-size: 18px;
+    opacity: 0.7;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 16px;
     padding-bottom: 5px;
 }
 
