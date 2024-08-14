@@ -151,14 +151,15 @@ body{
 }
 
 .card-subteams, .card-rocketry, .card-research{
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     padding: 5rem 0 0;
-    transition: transform 200ms ease;
+    transition: transform 200ms ease, box-shadow 0.3s ease;
     height: fit-content;
     border-color: white;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-research{
@@ -184,10 +185,12 @@ body{
     }
     .card-subteams:hover, .card-research:hover, .card-rocketry:hover{
         transform: scale(1.03);
-        .card-content{
-            transform: translateY(0%);
-        }
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
+    .card-content{
+        transform: translateY(0%);
+    }
+    
 }
 
 .card-content{
