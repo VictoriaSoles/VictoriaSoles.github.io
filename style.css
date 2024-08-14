@@ -145,8 +145,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.card{
-    background-color: grey;
+.card-subteams, .card-rocketry, .card-research{
     border-radius: 5px;
     overflow: hidden;
     padding: 5rem 0 0;
@@ -156,7 +155,23 @@ body{
     border-style: solid;
     border-width: 2px;
 }
-.card:hover{
+
+.card-research{
+    background-image: url(images/REASEARCH\ PIC\ 2.png);
+    background-size: cover;
+}
+
+.card-rocketry{
+    background-image: url(images/ROCKETRY\ PIC.png);
+    background-size: cover;
+}
+
+.card-subteams{
+    background-image: url(images/SUBTEAMS\ PIC.png);
+    background-size: cover;
+}
+
+.card-subteams:hover, .card-research:hover, .card-rocketry:hover{
     transform: scale(1.03);
     .card-content{
         transform: translateY(0%);
@@ -165,7 +180,10 @@ body{
 
 .card-content{
     padding: 0 20px 10px;
-    background:linear-gradient(rgba(0,0,0,0), #000 60%);
+    background:linear-gradient(
+        hsl(0 0% 0%/0)
+        hsl(0 0% 0%/.1)
+        hsl(0 0% 0%/1));
     transform: translateY(45%);
     transition: transform 200ms ease;
     height: fit-content;
