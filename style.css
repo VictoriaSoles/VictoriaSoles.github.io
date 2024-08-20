@@ -142,7 +142,8 @@ body{
 
 
 .card-container{
-    background:linear-gradient(rgba(0,0,0,0), #000 30%);
+    /* background:linear-gradient(rgba(0,0,0,0), #000 30%); */
+    background-color:white;
     display: grid;
     grid-gap: 50px;
     padding: 60px;
@@ -151,7 +152,7 @@ body{
 }
 
 .card-subteams, .card-rocketry, .card-research{
-    border-radius: 10px;
+    border-radius: 30px;
     overflow: hidden;
     padding: 5rem 0 0;
     transition: transform 200ms ease, box-shadow 0.3s ease;
@@ -186,11 +187,10 @@ body{
     .card-subteams:hover, .card-research:hover, .card-rocketry:hover{
         transform: scale(1.03);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        .card-content{
+            transform: translateY(0%);
+        }
     }
-    .card-content{
-        transform: translateY(0%);
-    }
-    
 }
 
 .card-content{
