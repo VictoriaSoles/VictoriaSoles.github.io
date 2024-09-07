@@ -1,5 +1,7 @@
 body{
-    background: url(images/n825vxqc.png);
+    /* background: url(images/n825vxqc.png); */
+    /* background: url(images/pexels-photo-574116.jpeg); */
+    background-color: rgba(18, 14, 51);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -17,7 +19,8 @@ body{
     height: 30px;
     font-weight: 500;
     font-family: "Rajdhani", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 .card-btn{
@@ -26,8 +29,9 @@ body{
 
 .menu-btn{
     display: inline-block;
-    padding: 0 15px;
-    margin:29px;
+    padding: 0 13px;
+    margin:0 15px 0; 
+    box-shadow: #000;
 }
 .dropdown-btn{
     display: block;
@@ -46,12 +50,17 @@ body{
     max-height: 1000px;
 }
 
+.nav-links{
+    padding-inline-start: 0;
+    padding-right: 45px;
+}
+
 .nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 5%;
+    padding: 15px 50px 5px 50px;
 }
 
 .right-bar{
@@ -61,6 +70,7 @@ body{
 
 .ublogo-home{
     max-width: 200px;
+    padding-top: 20px;
 }
 
 .search{
@@ -68,30 +78,32 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 14px;
-    background: transparent;
+    padding: 8px 15px 8px 25px;
     gap: 20px;
+    background-color:rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
 }
 
 .search-icon{
-    width: 7px;
+    width: 5px;
     color: whitesmoke;
 }
 
 .search-input{
-    font-size: 15px;
+    font-size: 18px;
     font-family: "Rajdhani", sans-serif;
     outline: none;
     border: none;
     background: transparent;
     color: whitesmoke;
+    width: 70px;
 }
 
 .search-input::placeholder{
     color: whitesmoke;
     font-family: "Rajdhani",sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .nav-bar .toggle-btn{
@@ -131,8 +143,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 60px;
     padding-bottom: 90px;
+    padding-right: 20px;
 }
 
 .ubsedslogo{
@@ -141,25 +154,32 @@ body{
 }
 
 
-.card-container{
-    /* background:linear-gradient(rgba(0,0,0,0), #000 30%); */
-    background-color:white;
+.card-container,.card-container-subteams{
+    background:linear-gradient(rgba(0,0,0,0), #000 20%);
     display: grid;
     grid-gap: 50px;
     padding: 60px;
     padding-top: 300px;
+}
+
+.card-container{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.card-container-subteams{
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    padding: 0 250px 0;
+}
+
 .card-subteams, .card-rocketry, .card-research{
-    border-radius: 30px;
+    border-radius: 25px;
     overflow: hidden;
-    padding: 5rem 0 0;
+    padding: 4rem 0 0;
     transition: transform 200ms ease, box-shadow 0.3s ease;
     height: fit-content;
     border-color: white;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -186,7 +206,7 @@ body{
     }
     .card-subteams:hover, .card-research:hover, .card-rocketry:hover{
         transform: scale(1.03);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
         .card-content{
             transform: translateY(0%);
         }
@@ -234,4 +254,58 @@ body{
         padding: 30px;
         grid-gap: 30px;
     }
+}
+
+.footer-container{
+    display: flex;
+    padding: 20px 20px 20px;
+}
+
+.footer-heading{
+    color: white;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.footer-text{
+    color: white;
+    font-family: "Rajdhani", sans-serif;
+}
+
+/* SUBTEAMS PAGE*/
+
+.subteam-heading{
+    color: white;
+    font-size: clamp(20px, 3vw + 25px, 200px);
+    font-family: "Rajdhani", sans-serif;
+    display: flex;
+    justify-content: center;
+    max-height: fit-content;
+    align-items: center;
+}
+
+.subteam-text-card{
+    height: fit-content;
+    /* padding: 30px 50px 30px 50px; */
+}
+
+.card-body{
+    font-size: 40px;
+    text-align: justify;
+    
+}
+
+.subteam-image-card{
+    border-radius: 25px;
+    overflow: hidden;
+    /* padding: 4rem 0 0; */
+    height: fit-content;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    max-height: 500px;
+}
+
+.subteam-pic{
+    max-height: 800px;
 }
