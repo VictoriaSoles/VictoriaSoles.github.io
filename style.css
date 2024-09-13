@@ -1,7 +1,5 @@
 body{
-    /* background: url(images/n825vxqc.png); */
-    /* background: url(images/pexels-photo-574116.jpeg); */
-    background-color: rgba(18, 14, 51);
+    background: url(images/n825vxqc.png);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -168,7 +166,7 @@ body{
 
 .card-container-subteams{
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    padding: 0 250px 0;
+    padding: 90px 250px 0;
 }
 
 .card-subteams, .card-rocketry, .card-research{
@@ -227,7 +225,7 @@ body{
 .card-title{
     font-family: "Rajdhani", sans-serif;
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     line-height: 1px;
     padding-top: 50px;
 }
@@ -288,7 +286,12 @@ body{
     /* padding: 30px 50px 30px 50px; */
 }
 
-.card-body{
+.card-body-subteam{
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    opacity: 0.7;
+    font-family: "Rajdhani", sans-serif;
+    padding-bottom: 5px;
     font-size: 40px;
     text-align: justify;
     
