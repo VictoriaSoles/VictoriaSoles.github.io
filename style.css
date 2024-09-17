@@ -37,9 +37,29 @@ body{
     text-decoration: none;
 }
 
-.card-btn:hover, .menu-btn:hover{
+.card-btn:hover, .menu-btn:hover, .contact-us-btn:hover{
     background-color: white;
     color: black;
+}
+
+.contact-us-btn{
+    background-color: rgb(4, 4, 87);
+    color: white; 
+    cursor: pointer;
+    /* border-color: whitesmoke; */
+    border-style: none;
+    border-radius: 12px;
+    border-width: 1px;
+    width: fit-content;
+    height: 40px;
+    font-weight: 500;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 18px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 0 13px;
+    margin:0 15px 0; 
+    box-shadow: #000;
 }
 
 .header-container{
@@ -49,8 +69,7 @@ body{
 }
 
 .nav-links{
-    padding-inline-start: 0;
-    padding-right: 45px;
+    padding-inline-start: 10px;
 }
 
 .nav-bar{
@@ -71,37 +90,9 @@ body{
     padding-top: 20px;
 }
 
-.search{
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 15px 8px 25px;
-    gap: 20px;
-    background-color:rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
-}
-
-.search-icon{
-    width: 5px;
-    color: whitesmoke;
-}
-
-.search-input{
-    font-size: 18px;
-    font-family: "Rajdhani", sans-serif;
-    outline: none;
-    border: none;
-    background: transparent;
-    color: whitesmoke;
-    width: 70px;
-}
-
-.search-input::placeholder{
-    color: whitesmoke;
-    font-family: "Rajdhani",sans-serif;
-    font-weight: 500;
-    font-size: 16px;
+.sedslogo-corner{
+    max-width: 200px;
+    padding-top: 20px;
 }
 
 .nav-bar .toggle-btn{
@@ -109,6 +100,7 @@ body{
     font-size: 25px;
     cursor: pointer;
     display: none;
+    ;
 }
 
 .dropdown-menu{
@@ -127,7 +119,8 @@ body{
 /* RESPONSIVE NAVBAR */
 @media(max-width: 1300px){
     .nav-links,
-    .nav-bar .search{
+    .contact-btn-container
+     {
         display:none;
     }
 
@@ -154,6 +147,9 @@ body{
 
 .card-container,.card-container-subteams{
     background:linear-gradient(rgba(0,0,0,0), #000 20%);
+}
+
+.card-container,.card-container-subteams, .card-container-subteams-page{
     display: grid;
     grid-gap: 50px;
     padding: 60px;
@@ -164,10 +160,11 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.card-container-subteams{
+.card-container-subteams, .card-container-subteams-page{
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     padding: 90px 250px 0;
 }
+
 
 .card-subteams, .card-rocketry, .card-research{
     border-radius: 25px;
@@ -256,18 +253,31 @@ body{
 
 .footer-container{
     display: flex;
-    padding: 20px 20px 20px;
+    padding: 70px 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px;
+    
 }
 
-.footer-heading{
+.copyright-text{
     color: white;
+    font-size: 15px;
     font-family: "Rajdhani", sans-serif;
 }
 
-.footer-text{
-    color: white;
-    font-family: "Rajdhani", sans-serif;
+.footer-logo-container{
+    display: flex;
+    justify-content: center;
+    max-height: fit-content;
+    align-items: center;
+    margin-left: 115px;
 }
+
+.logo-test{
+    margin: 0 12px 0;
+}
+
 
 /* SUBTEAMS PAGE*/
 
@@ -298,6 +308,7 @@ body{
 }
 
 .subteam-image-card{
+    background-color: #000;
     border-radius: 25px;
     overflow: hidden;
     /* padding: 4rem 0 0; */
@@ -306,9 +317,19 @@ body{
     border-style: solid;
     border-width: 2px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    max-height: 500px;
+    max-height: 450px;
 }
 
 .subteam-pic{
     max-height: 800px;
+}
+
+.subteam-big-heading{
+    font-size: 80px;
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    max-height: fit-content;
+    align-items: center;
 }
