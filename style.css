@@ -308,6 +308,7 @@ body{
 }
 
 .subteam-image-card{
+    position: relative;
     background-color: #000;
     border-radius: 25px;
     overflow: hidden;
@@ -332,4 +333,12 @@ body{
     justify-content: center;
     max-height: fit-content;
     align-items: center;
+}
+
+.card-link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
 }
