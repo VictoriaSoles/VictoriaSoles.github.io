@@ -161,7 +161,7 @@ body{
 }
 
 .card-container-subteams, .card-container-subteams-page{
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     padding: 90px 250px 0;
 }
 
@@ -292,7 +292,7 @@ body{
 }
 
 .subteam-text-card{
-    height: fit-content;
+    height: fit-content; 
     /* padding: 30px 50px 30px 50px; */
 }
 
@@ -341,4 +341,10 @@ body{
     bottom: 0;
     left: 0;
     width: 0;
+}
+
+.subteam-image-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
