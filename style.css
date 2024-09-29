@@ -219,7 +219,7 @@ body{
     height: fit-content;
 }
 
-.card-title{
+.card-title, .FAQ-title{
     font-family: "Rajdhani", sans-serif;
     color: white;
     font-size: 40px;
@@ -357,4 +357,27 @@ body{
     justify-content: center;
     max-height: fit-content;
     align-items: center;
+}
+
+.FAQ-questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding-top: 30px;
+}
+
+.FAQ-questions-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.FAQ-text{
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    opacity: 0.8;
+    font-size: 25px;
+    line-height: 1px;
+    padding-top: 0px;
 }
