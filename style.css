@@ -307,9 +307,9 @@ body{
     
 }
 
-.subteam-image-card{
+.subteam-image-card, .subteam-image-avionics, .subteam-image-propulsion, .subteam-image-structures, .subteam-image-dynamics, .subteam-image-recovery{
     position: relative;
-    background-color: #000;
+    /* background-color: #000; */
     border-radius: 25px;
     overflow: hidden;
     /* padding: 4rem 0 0; */
@@ -320,6 +320,39 @@ body{
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     max-height: 450px;
 }
+
+.subteam-image-avionics{
+    background-image: url(subteamcardimages/avionics.png);
+    background-size: cover;
+}
+
+.subteam-image-propulsion{
+    background-image: url(subteamcardimages/propulsion.png);
+    background-size: cover;
+}
+
+.subteam-image-structures{
+    background-image: url(subteamcardimages/structures.png);
+    background-size: cover;
+}
+
+.subteam-image-recovery{
+    background-image: url(subteamcardimages/recovery.png);
+    background-size: cover;
+}
+
+.subteam-image-dynamics{
+    background-image: url(subteamcardimages/dynamics.png);
+    background-size: cover;
+}
+
+.card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    }
 
 .subteam-pic{
     max-height: 800px;
@@ -333,14 +366,6 @@ body{
     justify-content: center;
     max-height: fit-content;
     align-items: center;
-}
-
-.card-link{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0;
 }
 
 .subteam-image-card-container{
@@ -359,18 +384,34 @@ body{
     align-items: center;
 }
 
-.FAQ-questions{
+.sponser-heading{
+    color: white;
+    font-size: clamp(20px, 2vw + 20px, 100px);
+    font-family: "Rajdhani", sans-serif;
     display: flex;
+    justify-content: center;
+    max-height: fit-content;
+    align-items: center;
+    font-size: 30px;
+}
+.FAQ-questions{
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    padding-top: 30px;
+    padding: 30px;
+    background-color: black;
+    width: fit-content;
+    overflow: hidden; */
+    
 }
 
 .FAQ-questions-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
 }
 
 .FAQ-text{
@@ -380,4 +421,23 @@ body{
     font-size: 25px;
     line-height: 1px;
     padding-top: 0px;
+}
+
+.sponser-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.sponsers{
+    height: fit-content;
+    max-width: 400px;
+    padding: 30px 90px 0px;
+}
+
+.last-card{
+    grid-row-start: 3;
+    grid-column: span 2;
+    margin: 0px 300px;
 }
