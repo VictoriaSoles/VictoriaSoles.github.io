@@ -161,7 +161,7 @@ body{
 }
 
 .card-container-subteams, .card-container-subteams-page{
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     padding: 90px 300px 40px;
 }
 
@@ -242,7 +242,7 @@ body{
 }
 
 @media(max-width: 850px){
-    .grid-col-span{
+    .grid-col-span, .last-card{
         grid-column: span 1;
     }
     .card-container{
@@ -307,7 +307,7 @@ body{
     
 }
 
-.subteam-image-card, .subteam-image-avionics, .subteam-image-propulsion, .subteam-image-structures, .subteam-image-dynamics, .subteam-image-recovery{
+.subteam-image-card{
     position: relative;
     /* background-color: #000; */
     border-radius: 25px;
@@ -431,7 +431,6 @@ body{
 }
 
 .sponsers{
-    height: fit-content;
     max-width: 400px;
     padding: 30px 90px 0px;
 }
@@ -439,5 +438,63 @@ body{
 .last-card{
     grid-row-start: 3;
     grid-column: span 2;
-    margin: 0px 300px;
+    /* margin: 0px 300px; */
+}
+
+/* CONTACT PAGE */
+.IREC-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    padding: 0px 60px;
+}
+.eboard-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    padding: 0px 60px;
+}
+
+.member-card{
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 4rem 0 0;
+    transition: transform 200ms ease, box-shadow 0.3s ease;
+    height: fit-content;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+}
+
+.member-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding-top: 40px;
+    padding-bottom: 15px;
+    margin-top: 270px;
+    background: linear-gradient(
+        to bottom, /* Specify the direction of the gradient */
+        rgba(0, 0, 0, 0), /* Fully transparent black */
+        rgba(0, 0, 0, 0.9), /* 10% opaque black */
+        rgba(0, 0, 0, 1) /* Fully opaque black */
+    );
+}
+
+.position-title, .member-name{
+    font-family: "Rajdhani", sans-serif;
+    color: aliceblue;
+}
+
+.member-name{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.position-title{
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0px;
 }
