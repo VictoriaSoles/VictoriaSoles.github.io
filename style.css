@@ -145,7 +145,7 @@ body{
 }
 
 
-.card-container,.card-container-subteams{
+/* .card-container,.card-container-subteams{
     background:linear-gradient(rgba(0,0,0,0), #000 20%);
 }
 
@@ -161,12 +161,38 @@ body{
 }
 
 .card-container-subteams, .card-container-subteams-page{
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    padding: 90px 300px 40px;
+} */
+
+
+.card-container, .card-container-subteams, .card-container-subteammain{
+    background:linear-gradient(rgba(0,0,0,0), #000 20%);
+    display: grid;
+    padding: 60px;
+}
+
+.card-container, .card-container-subteams{
+    grid-gap: 50px;
+    padding-top: 300px;
+}
+
+.card-container-subteammain{
+    grid-gap: 70px;
+    padding-top: 100px;
+}
+
+.card-container{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card-container-subteams{
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     padding: 90px 300px 40px;
 }
 
 
-.card-subteams, .card-rocketry, .card-research{
+.card-home-subteampage{
     border-radius: 25px;
     overflow: hidden;
     padding: 4rem 0 0;
@@ -176,20 +202,6 @@ body{
     border-style: solid;
     border-width: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-research{
-    background-image: url(images/REASEARCH\ PIC\ 2.png);
-    background-size: cover;
-}
-
-.card-rocketry{
-    background-image: url(images/ROCKETRY\ PIC.png);
-    background-size: cover;
-}
-
-.card-subteams{
-    background-image: url(images/SUBTEAMS\ PIC.png);
     background-size: cover;
 }
 
@@ -199,7 +211,7 @@ body{
         transform: translateY(22%);
         transition: transform 200ms ease;
     }
-    .card-subteams:hover, .card-research:hover, .card-rocketry:hover{
+    .card-home-subteampage:hover{
         transform: scale(1.03);
         /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
         .card-content{
@@ -227,6 +239,14 @@ body{
     padding-top: 50px;
 }
 
+.subteam-card-title{
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    font-size: 70px;
+    line-height: 1px;
+    padding-top: 50px;
+}
+
 .card-body{
     font-family: "Rajdhani", sans-serif;
     color: white;
@@ -241,13 +261,41 @@ body{
     grid-column: span 2;
 }
 
-@media(max-width: 850px){
-    .grid-col-span{
+.grid-col-span3{
+    grid-row-start: 3;
+}
+
+.grid-col-span2{
+    grid-row-start: 2;
+}
+
+.grid-col-span1{
+    grid-row-start: 1;
+}
+
+/* @media(max-width: 850px){
+    .grid-col-span, .last-card{
         grid-column: span 1;
     }
     .card-container{
         padding: 30px;
         grid-gap: 30px;
+    }
+    .grid-col-span3, .grid-col-span2, .grid-col-span1{
+        grid-row-start: auto;
+    }
+} */
+
+@media(max-width: 1300px){
+    .grid-col-span, .last-card{
+        grid-column: span 1;
+    }
+    .card-container{
+        padding: 30px;
+        grid-gap: 30px;
+    }
+    .grid-col-span3, .grid-col-span2, .grid-col-span1{
+        grid-row-start: auto;
     }
 }
 
@@ -307,7 +355,7 @@ body{
     
 }
 
-.subteam-image-card, .subteam-image-avionics, .subteam-image-propulsion, .subteam-image-structures, .subteam-image-dynamics, .subteam-image-recovery{
+.subteam-image-card{
     position: relative;
     /* background-color: #000; */
     border-radius: 25px;
@@ -320,39 +368,6 @@ body{
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     max-height: 450px;
 }
-
-.subteam-image-avionics{
-    background-image: url(subteamcardimages/avionics.png);
-    background-size: cover;
-}
-
-.subteam-image-propulsion{
-    background-image: url(subteamcardimages/propulsion.png);
-    background-size: cover;
-}
-
-.subteam-image-structures{
-    background-image: url(subteamcardimages/structures.png);
-    background-size: cover;
-}
-
-.subteam-image-recovery{
-    background-image: url(subteamcardimages/recovery.png);
-    background-size: cover;
-}
-
-.subteam-image-dynamics{
-    background-image: url(subteamcardimages/dynamics.png);
-    background-size: cover;
-}
-
-.card-link {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    }
 
 .subteam-pic{
     max-height: 800px;
@@ -431,7 +446,6 @@ body{
 }
 
 .sponsers{
-    height: fit-content;
     max-width: 400px;
     padding: 30px 90px 0px;
 }
@@ -439,5 +453,63 @@ body{
 .last-card{
     grid-row-start: 3;
     grid-column: span 2;
-    margin: 0px 300px;
+    /* margin: 0px 300px; */
+}
+
+/* CONTACT PAGE */
+.IREC-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    padding: 0px 60px;
+}
+.eboard-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    padding: 0px 60px;
+}
+
+.member-card{
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 4rem 0 0;
+    transition: transform 200ms ease, box-shadow 0.3s ease;
+    height: fit-content;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+}
+
+.member-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding-top: 40px;
+    padding-bottom: 15px;
+    margin-top: 270px;
+    background: linear-gradient(
+        to bottom, /* Specify the direction of the gradient */
+        rgba(0, 0, 0, 0), /* Fully transparent black */
+        rgba(0, 0, 0, 0.9), /* 10% opaque black */
+        rgba(0, 0, 0, 1) /* Fully opaque black */
+    );
+}
+
+.position-title, .member-name{
+    font-family: "Rajdhani", sans-serif;
+    color: aliceblue;
+}
+
+.member-name{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.position-title{
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0px;
 }
