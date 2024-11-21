@@ -43,7 +43,7 @@ body{
 }
 
 .contact-us-btn{
-    background-color: rgb(4, 4, 87);
+    background-color: rgb(39, 70, 207);
     color: white; 
     cursor: pointer;
     /* border-color: whitesmoke; */
@@ -178,7 +178,8 @@ body{
 }
 
 .card-container-subteammain{
-    grid-gap: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
     padding-top: 100px;
 }
 
@@ -195,7 +196,7 @@ body{
 .card-home-subteampage{
     border-radius: 25px;
     overflow: hidden;
-    padding: 4rem 0 0;
+    padding: 3rem 0 0;
     transition: transform 200ms ease, box-shadow 0.3s ease;
     height: fit-content;
     border-color: white;
@@ -203,6 +204,7 @@ body{
     border-width: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-size: cover;
+    /* max-width: 830px; */
 }
 
 @media (hover){
