@@ -475,7 +475,7 @@ body{
 }
 .eboard-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     grid-gap: 40px;
     padding: 0px 60px;
 }
@@ -519,7 +519,7 @@ body{
 }
 
 .position-title{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
     margin: 0px;
 }
