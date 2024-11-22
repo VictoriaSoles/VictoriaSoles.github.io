@@ -450,10 +450,13 @@ body{
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .sponsers{
-    max-width: 400px;
+    max-width: 200px;
+    height: auto;
     padding: 30px 90px 0px;
 }
 
